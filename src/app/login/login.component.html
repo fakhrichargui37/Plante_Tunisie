@@ -1,0 +1,51 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="tab-container">
+      <div class="tabs">
+        <span class="log" [class.active]="isLogin" (click)="toggleForm(true)">Login</span>
+        <span class="log" [class.active]="!isLogin" (click)="toggleForm(false)">Sign Up</span>
+      </div>
+      <div class="form-container">
+        <!-- Login Form -->
+        <form *ngIf="isLogin" (ngSubmit)="onLogin()">
+          <h2 class="login-title">Login Here</h2>
+          <div class="input-group">
+            <label for="login-username">Username</label>
+            <input id="login-username" type="text" pInputText placeholder="Email or Phone" [(ngModel)]="username" name="username" required />
+          </div>
+          <div class="input-group">
+            <label for="login-password">Password</label>
+            <input id="login-password" type="password" pInputText placeholder="Password" [(ngModel)]="password" name="password" required />
+          </div>
+          <button pButton type="submit" label="Log In" class="login-btn"></button>
+          <div class="social-buttons">
+            <button pButton icon="pi pi-google" label="Google" class="google-btn"></button>
+            <button pButton icon="pi pi-facebook" label="Facebook" class="facebook-btn"></button>
+          </div>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form *ngIf="!isLogin" (ngSubmit)="onSignUp()">
+          <h2 class="login-title">Sign Up</h2>
+          <div class="input-group">
+            <label for="signup-username">Username</label>
+            <input id="signup-username" type="text" pInputText placeholder="Username" [(ngModel)]="signupUsername" name="signupUsername" required />
+          </div>
+          <div class="input-group">
+            <label for="signup-email">Email</label>
+            <input id="signup-email" type="email" pInputText placeholder="Email" [(ngModel)]="signupEmail" name="signupEmail" required />
+          </div>
+          <div class="input-group">
+            <label for="signup-password">Password</label>
+            <input id="signup-password" type="password" pInputText placeholder="Password" [(ngModel)]="signupPassword" name="signupPassword" required />
+          </div>
+          <button pButton type="submit" label="Sign Up" class="login-btn"></button>
+          <div class="social-buttons">
+            <button pButton icon="pi pi-google" label="Google" class="google-btn"></button>
+            <button pButton icon="pi pi-facebook" label="Facebook" class="facebook-btn"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
