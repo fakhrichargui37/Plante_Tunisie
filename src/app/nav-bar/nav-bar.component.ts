@@ -26,7 +26,25 @@ export class NavBarComponent implements OnInit{
               icon: 'pi pi-star'
           },
           {
-              label: 'Projects',
+                label: 'Add',
+                icon: 'pi pi-plus',
+                items: [
+                    {
+                        label: 'Product',
+                        icon: 'pi pi-plus',
+                    },
+                    {
+                        label: 'Category',
+                        icon: 'pi pi-server',
+                    },
+                    {
+                        label: 'User',
+                        icon: 'pi pi-user',
+                    }
+                ]
+          },
+          {
+              label: 'category',
               icon: 'pi pi-search',
               items: [
                   {

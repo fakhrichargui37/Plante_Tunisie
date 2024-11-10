@@ -15,15 +15,22 @@ import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
 import { TabViewModule } from 'primeng/tabview';
 import { HttpClientModule } from '@angular/common/http';
+import { DropdownModule } from 'primeng/dropdown';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddProductComponent } from './add-product/add-product.component';
+import { HomeComponent } from './home/home.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NavBarComponent
+    NavBarComponent,
+    AddProductComponent,
+    HomeComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BadgeModule,
     ReactiveFormsModule,
     TabViewModule,
-    HttpClientModule
+    HttpClientModule,
+    DropdownModule
     
   ],
   providers: [],
