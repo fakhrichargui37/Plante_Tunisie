@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { CategoryComponent } from './category/category.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -12,8 +13,9 @@ const routes: Routes = [
     {path: 'dashboard', redirectTo: 'dashboard', pathMatch: 'full'},
     {path:'dashboard',component:DashboardComponent},
     {path:'navbar',component:NavBarComponent},
-    {path:'add-product',component:AddProductComponent},
-    {path:'add-category',component:CategoryComponent}
+    { path: 'home', component: HomeComponent },
+    { path: 'add-product', component: AddProductComponent },
+    { path: 'add-category', component: CategoryComponent },
     
 ];
 

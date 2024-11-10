@@ -6,10 +6,9 @@ import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button'; 
 import { InputTextModule } from 'primeng/inputtext';
 import { LoginComponent } from './login/login.component'; 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardModule } from 'primeng/card';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MenubarModule } from 'primeng/menubar';
 import { AvatarModule } from 'primeng/avatar';
 import { BadgeModule } from 'primeng/badge';
@@ -17,7 +16,8 @@ import { TabViewModule } from 'primeng/tabview';
 import { HttpClientModule } from '@angular/common/http';
 import { DropdownModule } from 'primeng/dropdown';
 
-import { ReactiveFormsModule } from '@angular/forms';
+// Import standalone components
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
@@ -27,7 +27,6 @@ import { CategoryComponent } from './category/category.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NavBarComponent,
     AddProductComponent,
     HomeComponent,
     CategoryComponent
@@ -45,8 +44,10 @@ import { CategoryComponent } from './category/category.component';
     ReactiveFormsModule,
     TabViewModule,
     HttpClientModule,
-    DropdownModule
+    DropdownModule,
     
+    // Import the standalone component instead of declaring it
+    NavBarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
