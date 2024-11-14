@@ -6,18 +6,19 @@ import { BadgeModule } from 'primeng/badge';
 import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
-import { RouterModule } from '@angular/router'; // Import RouterModule
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
   standalone: true,
-  imports: [CommonModule, MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, RouterModule] // Include RouterModule here
+  imports: [RouterModule, CommonModule, MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule]
 })
 export class NavBarComponent implements OnInit {
-
   items: MenuItem[] | undefined;
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.items = [
@@ -37,16 +38,17 @@ export class NavBarComponent implements OnInit {
           {
             label: 'Product',
             icon: 'pi pi-plus',
-            routerLink: ['/add-product']
+            routerLink: ['/product']
           },
           {
             label: 'Category',
             icon: 'pi pi-server',
-            routerLink: ['/add-category']
+            routerLink: ['/aff-category']
           },
           {
             label: 'User',
             icon: 'pi pi-user',
+            routerLink: ['/add-user']
           }
         ]
       },

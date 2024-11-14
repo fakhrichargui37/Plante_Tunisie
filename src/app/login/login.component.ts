@@ -38,7 +38,7 @@ export class LoginComponent {
     this.utilisateursServices.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(
       (data: any) => {
         console.log(data);
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/home']);
       },
       (error: any) => {
         alert('Login failed Invalid email or password');
@@ -54,7 +54,7 @@ export class LoginComponent {
     this.utilisateursServices.signup(this.registerForm.value.signupUsername, this.registerForm.value.signupEmail, this.registerForm.value.signupPassword).subscribe(
       (data: any) => {
         console.log(data);
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/home']);
       },
       (error: any) => {
         alert('Sign up failed email already exists');
