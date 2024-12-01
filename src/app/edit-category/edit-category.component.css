@@ -1,0 +1,89 @@
+/* General container styling */
+.p-grid {
+    margin-top: 1rem; /* Top spacing */
+    justify-content: center; /* Center the grid content horizontally */
+  }
+  
+  /* Form container styling */
+  .p-fluid {
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 2rem; /* Inner padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 1600px; /* Restricts max width for larger screens */
+    width: 100%; /* Ensures responsiveness */
+  }
+  
+  /* Form heading styling */
+  .p-fluid h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker text color */
+    margin-bottom: 1.5rem; /* Space below the heading */
+    font-size: 1.5rem; /* Larger, readable font size */
+  }
+  
+  /* Label styling */
+  .p-field label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem; /* Spacing between label and input */
+    display: block; /* Ensures labels stack above inputs */
+  }
+  
+  /* Input field styling */
+  .p-field input,
+  .p-field textarea {
+    width: 100%; /* Full width inside the container */
+    padding: 0.75rem; /* Adequate padding */
+    font-size: 1rem; /* Consistent font size */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    background-color: #f5f5f5; /* Light background */
+    box-sizing: border-box; /* Include padding and border in width */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  }
+  
+  .p-field input:focus,
+  .p-field textarea:focus {
+    border-color: #007ad9; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 122, 217, 0.3); /* Soft focus shadow */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Textarea specific styling */
+  #categoryDescription {
+    min-height: 120px; /* Minimum height for better usability */
+    max-height: 300px; /* Restrict max height for aesthetics */
+    resize: vertical; /* Allow vertical resizing only */
+    font-family: Arial, sans-serif; /* Consistent font family */
+    font-size: 1rem; /* Readable font size */
+    color: #333; /* Text color */
+  }
+  
+  /* Button styling */
+  button[pButton] {
+    width: 100%; /* Full-width button */
+    margin-top: 1.5rem; /* Spacing above button */
+    background-color: #007ad9; /* Primary color */
+    color: #fff; /* White text */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Readable font size */
+    padding: 0.75rem; /* Button padding */
+  }
+  
+  button[pButton]:hover {
+    background-color: #005fa3; /* Darken on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .p-fluid {
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+  
+    #categoryDescription {
+        min-height: 100px; /* Adjust height for mobile */
+    }
+  }
+  

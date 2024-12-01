@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+<div>
+    <h2>Utilisateurs</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of utilisateurs">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <button (click)="deleteUser(user.id)">Delete</button>
+            <button (click)="updateRole(user.id, 'fournisseur')">Set fournisseur</button>
+            <button (click)="updateRole(user.id, 'utilisateur')">Set utilisateur</button>
+            <button (click)="updateDetails(user.id)">Update Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

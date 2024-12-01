@@ -40,16 +40,21 @@ export class LoginComponent {
       this.utilisateursServices.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(
         (data: any) => {
           console.log('Login success:', data);
+  
+          // Save user email and ID to localStorage
+          localStorage.setItem('userEmail', data.email); // Assuming API returns `email`
+          localStorage.setItem('userId', data.id);       // Assuming API returns `id`
+  
+          // Navigate to the home page after successful login
           this.router.navigate(['/home']);
         },
         (error: any) => {
           console.error('Login error response:', error);
-          alert('Login failed Invalid email or password');
+          alert('Login failed: Invalid email or password');
         }
       );
     }
-  }
-
+  }  
 
   onSignUp() {
     if(this.registerForm.invalid){

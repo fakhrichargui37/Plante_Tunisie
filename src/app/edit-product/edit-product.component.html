@@ -30,16 +30,13 @@
 
       <!-- Product Image -->
       <div class="p-field">
-        <label for="productImage">Image</label>
-        <input id="productImage" type="text" pInputText [(ngModel)]="product.image" placeholder="Enter image URL" />
+        <label for="productImage">Product Image</label>
+        <input id="productImage" type="file" (change)="onFileSelected($event)" />
       </div>
-
-      <!-- Category Dropdown -->
       <div class="p-field">
         <label for="productCategory">Category</label>
-        <p-dropdown id="productCategory" [(ngModel)]="product.categorie_id" [options]="categories" placeholder="Select a category"></p-dropdown>
+        <p-dropdown id="productCategory" [(ngModel)]="product.categorie" [options]="categories" optionLabel="label" optionValue="value" placeholder="Select a category"></p-dropdown>
       </div>
-
       <!-- Submit Button -->
       <button pButton type="button" label="Update" ></button>
     </div>

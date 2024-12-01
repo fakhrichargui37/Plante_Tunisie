@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+<div *ngIf="userDetails" class="container">
+    <h2>User Details</h2>
+    <form (ngSubmit)="updateUserDetails()">
+      <label for="username">Username</label>
+      <input type="text" id="username" [(ngModel)]="updatedUsername" name="username" required>
+    
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="updatedEmail" name="email" required>
+    
+      <button type="submit">Update Details</button>
+    </form>
+  </div>
+  
+  

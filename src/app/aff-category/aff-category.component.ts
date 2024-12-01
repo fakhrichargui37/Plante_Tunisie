@@ -21,8 +21,8 @@ throw new Error('Method not implemented.');
   ngOnInit(): void {
     this.getCategories();
   }
-
   getCategories(): void {
+    console.log();
     this.categoryService.getAllCategories().subscribe(
       (data: Categorie[]) => {  
         this.categories = data;

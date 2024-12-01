@@ -1,0 +1,230 @@
+/* General container styling */
+div {
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header styling */
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Table header styling */
+  table thead tr {
+    background: linear-gradient(45deg, #4CAF50, #2ecc71);
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Table cell styling */
+  table th,
+  table td {
+    padding: 16px 20px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Table row styling */
+  table tbody tr {
+    background-color: #fafafa;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Alternate row coloring */
+  table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  table tbody tr:hover {
+    background-color: #dff0d8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 16px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button color variations */
+  button:nth-child(1) {
+    background-color: #e74c3c; /* Delete button: Red */
+  }
+  
+  button:nth-child(1):hover {
+    background-color: #c0392b;
+  }
+  
+  button:nth-child(2) {
+    background-color: #3498db; /* Set Admin button: Blue */
+  }
+  
+  button:nth-child(2):hover {
+    background-color: #2980b9;
+  }
+  
+  button:nth-child(3) {
+    background-color: #2ecc71; /* Set User button: Green */
+  }
+  
+  button:nth-child(3):hover {
+    background-color: #27ae60;
+  }
+  
+  button:nth-child(4) {
+    background-color: #9b59b6; /* Update Details button: Purple */
+  }
+  
+  button:nth-child(4):hover {
+    background-color: #8e44ad;
+  }
+  
+  /* Empty state message styling */
+  .no-data-message {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    font-style: italic;
+    margin: 20px 0;
+  }
+  
+  /* Add subtle animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  table tbody tr {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  button {
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  /* Input styling for forms */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Form label styling */
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    display: block;
+  }
+  
+  /* Button styling for form submission */
+  form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  
+    th,
+    td {
+      padding: 10px;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    button {
+      font-size: 14px;
+    }
+  }
+  
+  /* Interactive scroll effect */
+  div {
+    scroll-behavior: smooth;
+  }
+  

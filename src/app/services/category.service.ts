@@ -29,6 +29,6 @@ export class CategoryService {
   }
 
   public getCategoryById(id: number): Observable<Categorie> {
-    return this.http.get<Categorie>('http://localhost:9094/api/categories/byId/' + id);
+    return this.http.get<Categorie>('http://localhost:9094/api/categories/affiche/' + id);
   }
 }

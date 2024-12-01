@@ -1,0 +1,138 @@
+/* Container to center the form on the page */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Styling for the form labels */
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  
+  /* Styling for the input fields */
+  form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Adding some hover effect on input fields */
+  form input:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Focus effect for input fields */
+  form input:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.6);
+  }
+  
+  /* Styling for the submit button */
+  form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Make the button span the width of the container */
+  }
+  
+  /* Change button color on hover */
+  form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Add space between elements */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between form elements */
+  }
+  
+  /* Error message styles (if needed for form validation) */
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      max-width: 90%; /* Make form container width responsive on smaller screens */
+    }
+  
+    form button {
+      padding: 12px 18px;
+      font-size: 14px;
+    }
+  
+    form input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Subtle animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply fade-in animation */
+  .container {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  /* Input placeholder styling */
+  form input::placeholder {
+    color: #999;
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  /* Form input focus effect */
+  form input:focus::placeholder {
+    color: #007bff;
+  }
+  
+  /* Button focus effect for accessibility */
+  form button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px rgba(0, 123, 255, 0.4);
+  }
+  

@@ -31,7 +31,7 @@ export class ProductComponent implements OnInit {
         reader.readAsDataURL(imageData);
       },
       (error) => {
-        console.error('Error loading product image:', error);
+        alert('Error loading product image:'+ error);
       }
     );
   }
@@ -40,17 +40,17 @@ export class ProductComponent implements OnInit {
     if (product.id !== undefined && product.id !== null) {
       if (confirm('Are you sure you want to delete this product?')) {
         this.productService.deleteProduct(product.id).subscribe(
-          () => {
+          (response: any) => {
             this.products = this.products.filter(p => p.id !== product.id);
-            console.log('Product deleted successfully');
+            alert('Product deleted successfully');
           },
           (error) => {
-            console.error('Error deleting product:', error);
+            alert('Error deleting product:'+ error);
           }
         );
       }
     } else {
-      console.error('Product ID is undefined');
+      alert('Product ID is undefined');
     }
   }
 }

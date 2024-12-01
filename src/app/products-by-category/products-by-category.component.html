@@ -1,0 +1,20 @@
+<app-nav-bar></app-nav-bar>
+<h1>Products in Category</h1>
+<!-- Display Loading message or spinner while fetching products -->
+<div *ngIf="isLoading" class="loading-message">Loading products...</div>
+
+<!-- Display products if available, else show no products message -->
+<div *ngIf="!isLoading && products.length > 0; else noProducts" class="products-list">
+  <div *ngFor="let product of products" class="product-card">
+    <img [src]="product.image || 'assets/default-image.jpg'" alt="{{ product.nom }}" />
+    <h3>{{ product.nom }}</h3>
+    <p>{{ product.description }}</p>
+    <p class="price">Price: {{ product.prix | currency }}</p>
+    <p class="quantity">Quantity: {{ product.quantite }}</p>
+    <a class="action-button" [routerLink]="['/product-details', product.id]">View Details</a>
+  </div>
+</div>
+
+<ng-template #noProducts>
+  <p>No products found in this category.</p>
+</ng-template>
