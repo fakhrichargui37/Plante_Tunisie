@@ -7,8 +7,11 @@ import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 import { Router, RouterModule } from '@angular/router';
+<<<<<<< HEAD
 import { HttpClient } from '@angular/common/http';
 import { Categorie } from '../Model/Categorie .mode';
+=======
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
 @Component({
   selector: 'app-nav-bar',
@@ -19,6 +22,7 @@ import { Categorie } from '../Model/Categorie .mode';
 })
 export class NavBarComponent implements OnInit {
   items: MenuItem[] | undefined;
+<<<<<<< HEAD
   categories: Categorie[] = []; 
 
   constructor(private router: Router, private http: HttpClient) {}
@@ -26,6 +30,12 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     this.fetchCategories();
 
+=======
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
     this.items = [
       {
         label: 'Home',
@@ -33,6 +43,13 @@ export class NavBarComponent implements OnInit {
         routerLink: ['/home']
       },
       {
+<<<<<<< HEAD
+=======
+        label: 'Features',
+        icon: 'pi pi-star'
+      },
+      {
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
         label: 'Add',
         icon: 'pi pi-plus',
         items: [
@@ -56,6 +73,7 @@ export class NavBarComponent implements OnInit {
       {
         label: 'Category',
         icon: 'pi pi-search',
+<<<<<<< HEAD
         items: this.categories.map(categorie => ({
           label: categorie.nom, // Category name
           icon: 'pi pi-tag',    // You can use a relevant icon here
@@ -116,10 +134,47 @@ export class NavBarComponent implements OnInit {
             label: 'Users',
             icon: 'pi pi-user',
             routerLink: ['/utilisateur']
+=======
+        items: [
+          {
+            label: 'Core',
+            icon: 'pi pi-bolt',
+            shortcut: '⌘+S'
+          },
+          {
+            label: 'Blocks',
+            icon: 'pi pi-server',
+            shortcut: '⌘+B'
+          },
+          {
+            label: 'UI Kit',
+            icon: 'pi pi-pencil',
+            shortcut: '⌘+U'
+          },
+          {
+            separator: true
+          },
+          {
+            label: 'Templates',
+            icon: 'pi pi-palette',
+            items: [
+              {
+                label: 'Apollo',
+                icon: 'pi pi-palette',
+                badge: '2'
+              },
+              {
+                label: 'Ultima',
+                icon: 'pi pi-palette',
+                badge: '3'
+              }
+            ]
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
           }
         ]
       },
       {
+<<<<<<< HEAD
         label: 'Category',
         icon: 'pi pi-search',
         items: this.categories.map(categorie => ({
@@ -141,4 +196,11 @@ export class NavBarComponent implements OnInit {
       }
     ];
   }  
+=======
+        label: 'Contact',
+        icon: 'pi pi-envelope'
+      }
+    ];
+  }
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 }

@@ -30,6 +30,7 @@
 
       <!-- Product Image -->
       <div class="p-field">
+<<<<<<< HEAD
         <label for="productImage">Product Image</label>
         <input id="productImage" type="file" (change)="onFileSelected($event)" />
       </div>
@@ -37,6 +38,18 @@
         <label for="productCategory">Category</label>
         <p-dropdown id="productCategory" [(ngModel)]="product.categorie" [options]="categories" optionLabel="label" optionValue="value" placeholder="Select a category"></p-dropdown>
       </div>
+=======
+        <label for="productImage">Image</label>
+        <input id="productImage" type="text" pInputText [(ngModel)]="product.image" placeholder="Enter image URL" />
+      </div>
+
+      <!-- Category Dropdown -->
+      <div class="p-field">
+        <label for="productCategory">Category</label>
+        <p-dropdown id="productCategory" [(ngModel)]="product.categorie_id" [options]="categories" placeholder="Select a category"></p-dropdown>
+      </div>
+
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
       <!-- Submit Button -->
       <button pButton type="button" label="Update" ></button>
     </div>

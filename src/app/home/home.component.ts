@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+<<<<<<< HEAD
 import {Product} from "../Model/Product.mode";
+=======
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
 @Component({
   selector: 'app-home',
@@ -8,6 +11,7 @@ import {Product} from "../Model/Product.mode";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+<<<<<<< HEAD
   products: Product[] = [];
 
   constructor(private productService: ProductService) { }
@@ -53,6 +57,9 @@ export class HomeComponent implements OnInit {
 })
 export class HomeComponent implements OnInit {
   products: any[] = [];
+=======
+  products: any[] = [];  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
   constructor(private productService: ProductService) { }
 
@@ -70,4 +77,8 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+<<<<<<< HEAD
 }**/
+=======
+}
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09

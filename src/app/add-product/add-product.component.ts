@@ -14,15 +14,28 @@ interface Categorie {
 })
 export class AddProductComponent {
   produit = {
+<<<<<<< HEAD
+=======
+    code: '',
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
     nom: '',
     prix: null,
     quantite: null,
     description: '',
+<<<<<<< HEAD
     categorie: null
   };
 
   categories: { label: string, value: Categorie }[] = [];
   selectedFile: File | null = null; // To store the selected file
+=======
+    image: '',
+    categorie: null
+  };
+
+  // Define categories array with Categorie objects
+  categories: { label: string, value: Categorie }[] = [];
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
   constructor(private http: HttpClient, private router: Router) {
     this.fetchCategories();
@@ -32,9 +45,16 @@ export class AddProductComponent {
   fetchCategories() {
     this.http.get<Categorie[]>('http://localhost:9094/api/categories/afficheTous').subscribe(
       (response) => {
+<<<<<<< HEAD
         this.categories = response.map(categorie => ({
           label: categorie.nom,
           value: categorie
+=======
+        // Map response to the format required by the dropdown
+        this.categories = response.map(categorie => ({
+          label: categorie.nom,  // category name
+          value: categorie        // full category object
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
         }));
         console.log('Categories fetched', this.categories);
       },
@@ -44,6 +64,7 @@ export class AddProductComponent {
     );
   }
 
+<<<<<<< HEAD
   // Handle file selection
   onFileSelected(event: any) {
     const file = event.target.files[0];
@@ -74,6 +95,18 @@ export class AddProductComponent {
       (error) => {
         console.error('Error submitting product:', error);
         alert('Failed to submit product.');
+=======
+  submitForm() {
+    console.log('Submitting product', this.produit);
+    this.http.post('http://localhost:9094/api/produits/ajoutProduit', this.produit).subscribe(
+      (response) => {
+        console.log('Product Submitted', response);
+        this.router.navigate(['/product']);
+      },
+      (error) => {
+        console.error('Error submitting product', error);
+        alert('Failed to submit product');
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
       }
     );
   }

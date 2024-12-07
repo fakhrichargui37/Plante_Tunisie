@@ -6,7 +6,11 @@
     justify-content: center;
     margin: 20px;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Individual product card styling */
   .product-card {
     width: 250px;
@@ -19,13 +23,21 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden; /* Prevent content overflow */
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Hover effect to scale and add shadow */
   .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Product image styling */
   .product-card img {
     width: 100%;
@@ -34,7 +46,11 @@
     border-radius: 8px;
     margin-bottom: 15px;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Product name (title) styling */
   .product-card h3 {
     font-size: 1.2em;
@@ -43,7 +59,11 @@
     color: #333;
     text-transform: capitalize; /* Capitalize each word */
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Description styling */
   .product-card p {
     font-size: 0.9em;
@@ -54,7 +74,11 @@
     overflow: hidden;
     text-overflow: ellipsis; /* Add ellipsis if the text overflows */
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Price styling */
   .product-card .price {
     font-size: 1.1em;
@@ -62,21 +86,33 @@
     color: #007bff;
     margin: 10px 0;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Quantity styling */
   .product-card .quantity {
     font-size: 0.9em;
     color: #555;
     margin-bottom: 10px;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Category styling */
   .product-card .category {
     font-size: 0.85em;
     color: #888;
     margin-bottom: 10px;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Button/Link for actions (like adding to cart or details) */
   .product-card .action-button {
     display: inline-block;
@@ -89,11 +125,19 @@
     margin-top: 10px;
     transition: background-color 0.3s;
   }
+<<<<<<< HEAD
 
   .product-card .action-button:hover {
     background-color: #0056b3;
   }
 
+=======
+  
+  .product-card .action-button:hover {
+    background-color: #0056b3;
+  }
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   /* Responsive design adjustments */
   @media (max-width: 768px) {
     .product-card {
@@ -101,3 +145,7 @@
       max-width: 300px;
     }
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09

@@ -1,4 +1,5 @@
 <app-nav-bar></app-nav-bar>
+<<<<<<< HEAD
 
 <div class="products-list">
   <div *ngFor="let product of products" class="product-card">
@@ -12,3 +13,18 @@
     <a class="action-button" [routerLink]="['/product-details', product.id]">View Details</a>
   </div>
 </div>
+=======
+<div class="products-list">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.image" alt="{{ product.nom }}" />
+      <h3>{{ product.nom }}</h3>
+      <p>{{ product.description }}</p>
+      <p class="price">Price: {{ product.prix }} USD</p>
+      <p class="quantity">Quantity: {{ product.quantite }}</p>
+      <p class="category">Category: {{ product.categorie?.nom || 'No category' }}</p>
+      <a class="action-button" href="#">View Details</a>
+    </div>
+  </div>
+  
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09

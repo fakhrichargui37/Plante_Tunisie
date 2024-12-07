@@ -28,6 +28,7 @@
         <textarea id="productDescription" pInputTextarea [(ngModel)]="produit.description" placeholder="Enter description"></textarea>
       </div>
 
+<<<<<<< HEAD
       <!-- Product Image Upload -->
       <div class="p-field">
         <label for="productImage">Image</label>
@@ -44,6 +45,18 @@
       <div class="p-field">
         <label for="productCategory">Category</label>
         <p-dropdown id="productCategory" [(ngModel)]="produit.categorie" [options]="categories" optionLabel="label" optionValue="value" placeholder="Select a category"></p-dropdown>
+=======
+      <!-- Product Image -->
+      <div class="p-field">
+        <label for="productImage">Image</label>
+        <input id="productImage" type="text" pInputText [(ngModel)]="produit.image" placeholder="Enter image URL" />
+      </div>
+
+      <!-- Category Dropdown -->
+      <div class="p-field">
+        <label for="productCategory">Category</label>
+        <p-dropdown id="productCategory" [(ngModel)]="produit.categorie" [options]="categories" optionLabel="label" placeholder="Select a category"></p-dropdown>
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
       </div>
 
       <!-- Submit Button -->

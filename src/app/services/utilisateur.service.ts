@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 import { Observable } from 'rxjs';
 import { utilisateurs } from '../Model/utilisateurs.mode'; // Import the model
+=======
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilisateurService {
 
+<<<<<<< HEAD
   private baseUrl = 'http://localhost:9094/api/utilisateurs';
 
   constructor(private http: HttpClient) {}
@@ -44,4 +48,13 @@ export class UtilisateurService {
   getUserById(id: number) {
     return this.http.get<utilisateurs>(`http://localhost:9094/api/utilisateurs/${id}`);
   }  
+=======
+  constructor(private http:HttpClient) { }
+  public login(email:string,password:string){
+    return this.http.post('http://localhost:9094/api/utilisateurs/login',{email,password});
+  }
+  public signup(username:string,email:string,password:string){
+    return this.http.post('http://localhost:9094/api/utilisateurs/register',{username,email,password});
+  }
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 }

@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { Product } from '../Model/Product.mode';
+<<<<<<< HEAD
 import { Categorie } from '../Model/Categorie .mode';
 import { HttpClient } from '@angular/common/http';  // Import HttpClient
+=======
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
 @Component({
   selector: 'app-edit-product',
@@ -18,6 +21,7 @@ export class EditProductComponent implements OnInit {
     prix: 0,
     quantite: 0,
     image: '',
+<<<<<<< HEAD
     categorie_id: 0, // Use categorie_id to bind category
     categorie: null  // Ensure categorie is an object, not a string
   };
@@ -25,29 +29,52 @@ export class EditProductComponent implements OnInit {
   categories: Categorie[] = []; // To store categories fetched from the server
 
   selectedFile: File | null = null; 
+=======
+    categorie_id: 0, // Set default value as 0
+    categorie: ''
+  };
+
+  categories = [
+    { label: 'Electronics', value: 1 },
+    { label: 'Clothing', value: 2 },
+    { label: 'Home Appliances', value: 3 }
+  ];
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
   constructor(
     private productService: ProductService,
     private activatedRoute: ActivatedRoute,
+<<<<<<< HEAD
     private router: Router,
     private http: HttpClient  // Inject HttpClient to fetch categories
+=======
+    private router: Router
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   ) {}
 
   ngOnInit(): void {
     const productId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+<<<<<<< HEAD
     
     // Fetch product by ID
+=======
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
     this.productService.getProductById(productId).subscribe(
       (data: Product) => {
         this.product = {
           ...data,
+<<<<<<< HEAD
           categorie_id: data.categorie_id ?? 0
+=======
+          categorie_id: data.categorie_id ?? 0 
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
         };
       },
       (error) => {
         console.error('Error fetching product:', error);
       }
     );
+<<<<<<< HEAD
 
     // Fetch categories for the dropdown
     this.fetchCategories();
@@ -110,4 +137,9 @@ export class EditProductComponent implements OnInit {
       }
     );
   }
+=======
+  }
+
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 }

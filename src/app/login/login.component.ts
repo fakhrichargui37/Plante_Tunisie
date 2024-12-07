@@ -13,14 +13,24 @@ export class LoginComponent {
   isLogin = true;
   loginForm!: FormGroup;
   registerForm!: FormGroup;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   constructor(private router: Router,private utilisateursServices:UtilisateurService,private fb: FormBuilder) {}
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
+<<<<<<< HEAD
       password: ['', [Validators.required]]
     });
 
+=======
+      password: ['', [Validators.required]] 
+    });
+    
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
    this.registerForm = this.fb.group({
     signupUsername: ['', [Validators.required]],
     signupEmail: ['', [Validators.required, Validators.email]],
@@ -32,6 +42,7 @@ export class LoginComponent {
   }
 
   onLogin() {
+<<<<<<< HEAD
     if (this.loginForm.invalid) {
       console.log('Form is invalid:', this.loginForm.value);
       return;
@@ -55,6 +66,22 @@ export class LoginComponent {
       );
     }
   }  
+=======
+    if(this.loginForm.invalid){
+      return;
+    }else{
+    this.utilisateursServices.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(
+      (data: any) => {
+        console.log(data);
+        this.router.navigate(['/home']);
+      },
+      (error: any) => {
+        alert('Login failed Invalid email or password');
+      }
+    );
+  }
+}
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
   onSignUp() {
     if(this.registerForm.invalid){

@@ -24,9 +24,15 @@
               <small class="text-danger" *ngIf="loginForm.get('password')?.errors?.['required']">password is required.</small>
           </div>
           </div>
+<<<<<<< HEAD
 
           <div class="forgot-password">
             <a [routerLink]="'/reset-password/request'">Forgot Password?</a>
+=======
+         
+          <div class="forgot-password">
+            <a  href="#">Forgot Password?</a>
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
           </div>
           <button pButton type="submit" label="Log In" class="login-btn"></button>
         </form>
@@ -41,7 +47,11 @@
               <small class="text-danger" *ngIf="registerForm.get('signupUsername')?.errors?.['required']">Username is required.</small>
           </div>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
           <div class="input-group">
             <label for="signup-email">Email</label>
             <input id="signup-email" type="email" pInputText placeholder="Email" formControlName="signupEmail" name="signupEmail" required />

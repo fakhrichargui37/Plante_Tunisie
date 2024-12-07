@@ -3,9 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { LoginComponent } from './login/login.component';
+=======
+import { ButtonModule } from 'primeng/button'; 
+import { InputTextModule } from 'primeng/inputtext';
+import { LoginComponent } from './login/login.component'; 
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { MenubarModule } from 'primeng/menubar';
@@ -24,6 +30,7 @@ import { AffCategoryComponent } from './aff-category/aff-category.component';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { ProductComponent } from './product/product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+<<<<<<< HEAD
 import { RequestResetEmailComponent } from './request-reset-email/request-reset-email.component';
 import { VerifyOtpComponent } from './verify-otp/verify-otp.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
@@ -36,6 +43,8 @@ import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
 
+=======
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
 
 @NgModule({
   declarations: [
@@ -48,6 +57,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     EditCategoryComponent,
     ProductComponent,
     EditProductComponent,
+<<<<<<< HEAD
     RequestResetEmailComponent,
     VerifyOtpComponent,
     ResetPasswordComponent,
@@ -59,11 +69,17 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     UtilisateurComponent,
     UserDetailsComponent,
 
+=======
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     ButtonModule,
+=======
+    ButtonModule, 
+>>>>>>> 4e7d136948cb151297e8e852f214b8cee2f28a09
     InputTextModule,
     FormsModule,
     CardModule,
